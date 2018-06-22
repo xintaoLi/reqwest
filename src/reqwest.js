@@ -21,7 +21,7 @@
 
   var httpsRe = /^http/
     , protocolRe = /(^\w+):\/\//
-    , twoHundo = /^(20\d|1223)$/ //http://stackoverflow.com/questions/10046972/msie-returns-status-code-of-1223-for-ajax-request
+    , twoHundo = /^(20\d|1223)$/ 
     , readyState = 'readyState'
     , contentType = 'Content-Type'
     , requestedWith = 'X-Requested-With'
@@ -60,8 +60,7 @@
           } else if (context[xDomainRequest]) {
             var protocolRegExp = /^https?/;
             if (window.location.href.match(protocolRegExp)[0] !== o.url.match(protocolRegExp)[0]) {
-              throw new Error('XDomainRequest: requests must be targeted to the same scheme as the hosting page.')
-              // As per: http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx
+              throw new Error('XDomainRequest: requests must be targeted to the same scheme as the hosting page.')              
             }
             return new XDomainRequest()
           } else {

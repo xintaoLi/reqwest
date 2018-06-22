@@ -1,5 +1,5 @@
 !function ($) {
-  var r = require('reqwest')
+  var r = require('./reqwest')
     , integrate = function (method) {
         return function () {
           var args = Array.prototype.slice.call(arguments, 0)
